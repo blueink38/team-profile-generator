@@ -1,0 +1,22 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blueink38/team-profile-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blueink38/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/blueink38/team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
