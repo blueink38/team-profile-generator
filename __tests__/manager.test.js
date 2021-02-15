@@ -1,11 +1,15 @@
 const Manager = require('../lib/Manager.js');
 
-test('creates an manager object', () => {
-    const manager = new Manager('Boss');
+jest.mock('../lib/Manager.js');
 
-    expect(manager.name).toBe('Boss');
-    expect(manager.id).toEqual(expect.any(String));
+test('creates an manager object', () => {
+    const manager = new Manager();
+
+    expect(manager.name).toEqual(expect.any(String));
+    expect(manager.managerId).toEqual(expect.any(String));
     expect(manager.email).toEqual(expect.any(String));
     expect(manager.officeNumber).toEqual(expect.any(String));
+
+    console.log(new Manager);
 
 });
