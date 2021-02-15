@@ -1,3 +1,3 @@
-const teamBuilder = require('./lib/team-builder');
+const Team = require('./lib/team-builder');
 
-new teamBuilder().initializeTeam();
+new Team().buildTeam();
