@@ -32,10 +32,10 @@ body {
 .employees {
   padding: 10px;
   margin: 10px;
-  justify-content:flex-start;
-  align-items: center;
+  align-content: flex-start;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
 .card {
