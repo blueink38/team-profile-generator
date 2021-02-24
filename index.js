@@ -3,10 +3,9 @@ const fs = require('fs');
 const jest = require("jest");
 
 // const Employee = require('../lib/Employee');
- const Manager = require('./lib/Manager');
+const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-// const generateHTML = require('./dist/generateHTML');
 
 const employee = [];
 
@@ -35,7 +34,7 @@ function buildTeam() {
       message: 'What is your role?',
       choices: ['Manager', 'Engineer', 'Intern']
     }])
-    .then(function({name, role, id, email}) {
+    .then(function({name, id, email, role}) {
         let newRole = "";
         if (role === "Engineer") {
             newRole = "GitHub username";
@@ -57,17 +56,17 @@ function buildTeam() {
             ],
             name: "addMembers"
         }])
-        .then(function({newRole, addMembers}) {
+        .then(function({newRole, addMember}) {
         let newMember;
         if (role === "Engineer") {
-            addMember === new Engineer(name, id, email, newRole);
+            newMember === new Engineer(name, id, email, newRole);
         } else if (role === "Intern") {
-            addMember = new Intern(name, id, email, newRole);
+            newMember = new Intern(name, id, email, newRole);
         } else {
-            addMember = new Manager(name, id, email, newRole);
+            newMember = new Manager(name, id, email, newRole);
         }
-        employee.push(buildTeam);
-        addHtml(addMember)
+        employee.push(newMember);
+        newHtml(addMember)
         .then(function() {
             if (addMember === "yes") {
                 addMember();
