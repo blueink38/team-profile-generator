@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const jest = require("jest");
 
-// const Employee = require('../lib/Employee');
+// const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -32,7 +32,7 @@ function buildTeam() {
       type: 'checkbox',
       name: 'role',
       message: 'What is your role?',
-      choices: ['Manager', 'Engineer', 'Intern']
+      choices: ["Manager", "Engineer", "Intern"]
     }])
     .then(function({name, id, email, role}) {
         let newRole = "";
@@ -54,7 +54,7 @@ function buildTeam() {
                 "yes",
                 "no"
             ],
-            name: "addMembers"
+            name: "addMember"
         }])
         .then(function({newRole, addMember}) {
         let newMember;
